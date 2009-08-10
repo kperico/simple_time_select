@@ -73,7 +73,6 @@ class SimpleTimeSelectTest < Test::Unit::TestCase
     assert_equal(expected, actual.nstrip, "Usual time select with no options")
   end
   
-  # TODO
   def test_start_and_end_hour
     time = Time.now.change(:hour => 21)
     # 10 AM to 2 PM
