@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{simple_time_select}
-  s.version = "0.0.0"
+  s.version = "0.1.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Anthony Amoyal"]
@@ -24,6 +24,8 @@ Gem::Specification.new do |s|
      "about.yml",
      "init.rb",
      "lib/simple_time_select.rb",
+     "pkg/simple_time_select-0.0.0.gem",
+     "simple_time_select.gemspec",
      "test/simple_time_select_test.rb",
      "test/test_helper.rb"
   ]
