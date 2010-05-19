@@ -24,8 +24,8 @@ Gem::Specification.new do |s|
      "about.yml",
      "init.rb",
      "lib/simple_time_select.rb",
+     "nbrew-simple_time_select.gemspec",
      "pkg/simple_time_select-0.0.0.gem",
-     "simple_time_select.gemspec",
      "test/simple_time_select_test.rb",
      "test/test_helper.rb"
   ]
