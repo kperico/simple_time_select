@@ -68,27 +68,6 @@ module ActionView::Helpers
         #build_hidden(:second, val)
       end
       alias_method_chain :select_second, :simple_time_select
-      
-      def select_year_with_simple_time_select
-        return select_year_without_simple_time_select unless @options[:simple_time_select].eql? true
-        # Don't build the year select
-        #build_hidden(:year, val)
-      end
-      alias_method_chain :select_year, :simple_time_select
-      
-      def select_month_with_simple_time_select
-        return select_month_without_simple_time_select unless @options[:simple_time_select].eql? true
-        # Don't build the month select
-        #build_hidden(:month, val)
-      end
-      alias_method_chain :select_month, :simple_time_select
-      
-      def select_day_with_simple_time_select
-        return select_day_without_simple_time_select unless @options[:simple_time_select].eql? true
-        # Don't build the day select
-        #build_hidden(:day, val)
-      end
-      alias_method_chain :select_day, :simple_time_select
      
   end
 end

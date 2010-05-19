@@ -25,10 +25,10 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gemspec|
     gemspec.name = "simple_time_select"
-    gemspec.summary = "This simple plugin gives you that component and allows you to set minute intervals"
-    gemspec.description = "A time select component using only ONE select field"
+    gemspec.summary = "Twelve hour time select from a single input for hour, minute and second. Does not modify month, day and year inputs."
+    gemspec.description = "A time select component using only ONE select field."
     gemspec.email = "tonyamoyal@gmail.com"
-    gemspec.homepage = "http://github.com/rsturim/simple_time_select"
+    gemspec.homepage = "http://github.com/nbrew/simple_time_select"
     gemspec.authors = ["Anthony Amoyal"]
   end
 rescue LoadError
