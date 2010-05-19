@@ -24,7 +24,7 @@ end
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gemspec|
-    gemspec.name = "simple_time_select"
+    gemspec.name = "nbrew-simple_time_select"
     gemspec.summary = "Twelve hour time select from a single input for hour, minute and second. Does not modify month, day and year inputs."
     gemspec.description = "A time select component using only ONE select field."
     gemspec.email = "tonyamoyal@gmail.com"
