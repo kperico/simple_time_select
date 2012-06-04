@@ -31,7 +31,7 @@ module ActionView::Helpers
         end
         
         if @options[:use_hidden] || @options[:discard_minute]
-          build_hidden(:minute, val)
+          build_hidden(:minute, val_minutes)
         else
           minute_options = []
           start_minute.upto(end_minute) do |minute|
@@ -40,14 +40,21 @@ module ActionView::Helpers
               hour = minute/60
               minute_padded = zero_pad_num(minute%60)
               hour_padded = zero_pad_num(hour)
-              ampm_hour = ampm_hour(hour)
-              
+
               val = "#{hour_padded}:#{minute_padded}:00"
-              minute_options << ((val_minutes == minute) ? 
-                %(<option value="#{val}" selected="selected">#{ampm_hour}:#{minute_padded}#{ampm}</option>\n) :
-                %(<option value="#{val}">#{ampm_hour}:#{minute_padded}#{ampm}</option>\n)
-              )
-            end
+              if @options[:twenty_four_hours]
+                minute_options << ((val_minutes == minute) ?
+                  %(<option value="#{val}" selected="selected">#{hour_formatted}:#{minute_padded}</option>\n) :
+                  %(<option value="#{val}">#{hour_formatted}:#{minute_padded}</option>\n)
+                )
+              else
+                ampm_hour = ampm_hour(hour)
+
+                minute_options << ((val_minutes == minute) ?
+                    %(<option value="#{val}" selected="selected">#{ampm_hour}:#{minute_padded}#{ampm}</option>\n) :
+                    %(<option value="#{val}">#{ampm_hour}:#{minute_padded}#{ampm}</option>\n)
+                )
+              end
           end
           build_select(:minute, minute_options.join)
         end
